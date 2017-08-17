@@ -20,6 +20,23 @@ class SongsController < ApplicationController
       render json: @song.errors, status: :unprocessable_entity
     end
 end
+def edit
+  @song = Song.find(params[:id])
+end
+def update
+  @song = Song.find(params[:id])
+  if @song.update!(song_params)
+    render json: @song, notice: 'updated!'
+  else
+    render json: @song.errors, status: :unprocessable_entity
+  end
+end
+def destroy
+  @song = Song.find(params[:id])
+  @song.delete
+
+  render json: @song, notice: 'deleted', status: :ok
+end
   private
   def song_params
     params.require(:song).permit(:title, :album, :preview_url)

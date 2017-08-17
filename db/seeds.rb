@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Song.create ([
-{ title: 'truckin', album: 'workingmans dead', preview_url: 'www.google.com' },
-{ title: 'lucky', album: 'dunnno', preview_url: 'www.google.com' }
+{ title: 'truckin', album: 'workingmans dead', preview_url: 'https://images-na.ssl-images-amazon.com/images/I/71B97AD9B-L._SY355_.jpg' },
+{ title: 'lucky', album: 'dunnno', preview_url: 'https://images-na.ssl-images-amazon.com/images/I/71B97AD9B-L._SY355_.jpg' }
 ])
